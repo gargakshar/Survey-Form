@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="page" class="container">   
+        <h1 id="title">freecodecamp survey form</h1>
+        <p id="description">thank you for taking time to help us improve the platform</p>
+    <div id="form">
+        <form id="survey-form" action="" >
+            <div class="form-group">
+                <label for="name" id="name-label">Name</label>  
+                <input class="form-input" id="name" type="text" placeholder="enter your name">
+                <span id="namerror"></span>
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">Email</label> 
+                <input class="form-input" id="email" type="email" placeholder="enter your email">
+            </div>
+            <div class="form-group">
+                <label for="number" id="number-label">Age</label> 
+                <input class="form-input" id="number" type="number" max="100" min="12" placeholder="age">
+            </div>
+            <div class="form-group">
+                <label for="dropdown">Which option best describes your current role?</label>
+                <select class="form-input" id="dropdown" name="role" placeholder="select current role">
+                    <option class="drop" value="student">student</option>
+                    <option class="drop" value="full time job">full time job</option>
+                    <option class="drop" value="full time learner">full time learner</option>
+                    <option class="drop" value="prefer not to say">prefer not to say</option>
+                    <option class="drop" value="other">other</option>
+                  </select>
+            </div>
+            <div class="form-group">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <label>
+                    <input type="radio" name="radio" id="definitely">
+                    Definitely
+                </label>
+                <label>
+                    <input type="radio" name="radio" id="maybe">
+                    Maybe
+                </label>
+                <label>
+                    <input type="radio" name="radio" id="not sure">
+                    Not sure
+                </label>
+
+            </div>
+            <div class="form-group">
+                <p> What is your favorite feature of freeCodeCamp? (Check all that apply)</p>
+                <label for="frontend">
+                    <input type="checkbox" name="" id="frontend" value="frontend">
+                    Front-end Projects
+                </label>
+                <label for="backend">
+                <input type="checkbox" name="" id="backend" value="backennd">
+                    Back-end Projects
+                </label>
+                <label for="frontend">
+                    <input type="checkbox" name="" id="datavis" value="datavis">
+                    Data Visualization
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="suggestions">Any comments or suggestions?</label>
+                <textarea type="textarea" id="suggestions" placeholder="write your suggestions here "> </textarea>
+            </div>
+            <div class="form-group">
+                <button id="submit" type="button">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    // function validation()
+    
+    const nameval= document.getElementById('name').value;
+    const submit= document.getElementById('submit');
+    const namerr= document.getElementById('namerror');
+    submit.addEventListener("click", () =>{
+        //      
+
+        if(nameval=="")
+        {
+            console.log("should not be empty");
+            namerr.innerHTML= "should not be empty";
+            return false;
+        }
+    })
+    
+    
+</script>
+ 
+</body>
+</html>
